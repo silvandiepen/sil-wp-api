@@ -33,23 +33,27 @@ function guyn_color_options() {
 	global $guynColors;
 	echo '<style>
 	.acf-field[data-type="radio"][data-name="section_color"] .acf-radio-list,
+	.acf-field[data-type="radio"][data-name="color"] .acf-radio-list,
 	.acf-field[data-type="radio"][data-name="page_color"] .acf-radio-list{
 		display:flex;
 		flex-wrap: wrap;
 	}
 	.acf-field[data-type="radio"][data-name="section_color"] .acf-radio-list li,
+	.acf-field[data-type="radio"][data-name="color"] .acf-radio-list li,
 	.acf-field[data-type="radio"][data-name="page_color"] .acf-radio-list li{
 		width: 2rem; height: 2rem;
 		flex-shrink: 0;
 		margin: 4px;
 	}
 	.acf-field[data-type="radio"][data-name="section_color"] .acf-radio-list li label,
+	.acf-field[data-type="radio"][data-name="color"] .acf-radio-list li label,
 	.acf-field[data-type="radio"][data-name="page_color"] .acf-radio-list li label{
 		display: block; text-indent: -999em; text-align: left; position: relative;
 		width: 2rem; height: 2rem;
 	}
 
 	.acf-field[data-type="radio"][data-name="section_color"] .acf-radio-list li input,
+	.acf-field[data-type="radio"][data-name="color"] .acf-radio-list li input,
 	.acf-field[data-type="radio"][data-name="page_color"] .acf-radio-list li input{
 		border: none;
 		border: 2px solid transparent;
@@ -62,6 +66,7 @@ function guyn_color_options() {
 		box-shadow: 0 0 1rem 0 rgba(0,0,0,0);
 	}
 	.acf-field[data-type="radio"][data-name="section_color"] .acf-radio-list li input:checked,
+	.acf-field[data-type="radio"][data-name="color"] .acf-radio-list li input:checked,
 	.acf-field[data-type="radio"][data-name="page_color"] .acf-radio-list li input:checked{
 		transform: scale(1.25);	
 		box-shadow: 0 0 1rem 0 rgba(0,0,0,0.25);
@@ -74,6 +79,8 @@ function guyn_color_options() {
 	foreach($guynColors as $i => $color) {
 		echo '.acf-field[data-type="radio"][data-name="section_color"] input[id^="-'.$guynColors[$i].'"],
 				.acf-field[data-type="radio"][data-name="section_color"] input[id*="-'.$guynColors[$i].'"],
+				.acf-field[data-type="radio"][data-name="color"] input[id^="-'.$guynColors[$i].'"],
+				.acf-field[data-type="radio"][data-name="color"] input[id*="-'.$guynColors[$i].'"],
 				.acf-field[data-type="radio"][data-name="page_color"] input[id^="-'.$guynColors[$i].'"],
 				.acf-field[data-type="radio"][data-name="page_color"] input[id*="-'.$guynColors[$i].'"]{
 			background-color: var(--guyn-'.$guynColors[$i].');
