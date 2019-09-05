@@ -1,0 +1,177 @@
+{
+	"products": [
+		{
+			"id": 1,
+			"title": "Adidas Stan Smith",
+			"brand": "Adidas",
+			"model": "Stan Smith",
+			"description": "Stan Smith is an American tennis player, who was active between the end of the 1960s and the beginning of the 1980s. Adidas approached him to endorse the so-called Haillet shoe in 1973.",
+			"images": [
+				{ "src": "https://cdn.silvandiepen.site/shoes/adidas-stansmith_001.png", "description": "side" },
+				{ "src": "https://cdn.silvandiepen.site/shoes/adidas-stansmith_002.png", "description": "simple side" }
+			],
+			"price": {
+				"value": "99.99",
+				"currency": "eur"
+			},
+			"stock": 0
+		},
+		{
+			"id": 2,
+			"title": "Adidas Superstar",
+			"brand": "Adidas",
+			"model": "Superstar",
+			"description": "The Superstar is a low-top shoe manufactured by athletic goods company Adidas since 1969. The shoe was originally released as a low-top version of the Pro Model basketball shoe.[1] Nicknamed the \"clamtoe\", \"shelltoe\", \"shell shoes\", \"shell tops\", and \"sea shells\" (along with Adicolours) the iconic design is known as one of the major influences in the sneaker culture.",
+			"images": [
+				{ "src": "https://cdn.silvandiepen.site/shoes/adidas-superstar_001.jpg", "description": "side" },
+				{ "src": "https://cdn.silvandiepen.site/shoes/adidas-superstar_002.jpg", "description": "simple side" }
+			],
+			"price": {
+				"value": "129.99",
+				"currency": "eur"
+			},
+			"stock": 0
+		},
+		{
+			"id": 3,
+			"title": "Nike Air Force 1",
+			"brand": "Nike",
+			"model": "Air Force 1",
+			"description": "The Air Force is a range of athletic shoes made by Nike, Inc. that began with the Air Force 1[1] and went on to include the Air Force 2, Air Force 3, Air Force STS, Air Force 5, Air Force XXV and Air Force 09. The Air Force 1 was created by designer Bruce Kilgore[2] and was the first basketball shoe to use the Nike Air technology. The shoe is offered in low, mid and high-top.hi Air Force 1 low are mostly worn.",
+			"images": [
+				{ "src": "https://cdn.silvandiepen.site/shoes/nike-airforce1__002.png", "description": "threequarter top" },	
+				{ "src": "https://cdn.silvandiepen.site/shoes/nike-airforce1__001.png", "description": "side" }
+			],
+			"price": {
+				"value": "129.99",
+				"currency": "eur"
+			},
+			"stock": 0
+		},
+		{
+				"id": 4,
+			"title": "Nike Air Jordan 11",
+			"brand": "Nike",
+			"model": "Air Jordan 11",
+			"description": "Air Jordan is a brand of basketball shoes, athletic, casual, and style clothing produced by Nike. It was created for former NBA player and 5 time NBA MVP Michael Jordan. The original Air Jordan sneakers were produced exclusively for Michael Jordan in early 1984, and released to the public in late 1984. The shoes were designed for Nike by Peter Moore, Tinker Hatfield, and Bruce Kilgore.",
+			"images": [
+				{ "src": "https://cdn.silvandiepen.site/shoes/nike-airjordan11__001.jpg", "description": "frontal" },
+				{ "src": "https://cdn.silvandiepen.site/shoes/nike-airjordan11__002.jpg", "description": "side" }
+			],
+			"price": {
+				"value": "124.99",
+				"currency": "eur"
+			},
+			"stock": 0
+		},
+		{
+			"id": 5,
+			"title": "Nike Air Jordan 1",
+			"brand": "Nike",
+			"model": "Air Jordan 1",
+			"description": "Air Jordan is a brand of basketball shoes, athletic, casual, and style clothing produced by Nike. It was created for former NBA player and 5 time NBA MVP Michael Jordan. The original Air Jordan sneakers were produced exclusively for Michael Jordan in early 1984, and released to the public in late 1984. The shoes were designed for Nike by Peter Moore, Tinker Hatfield, and Bruce Kilgore.",
+			"images": [
+				{ "src": "https://cdn.silvandiepen.site/shoes/nike-airjordan1_001.png", "description": "frontal" },
+				{ "src": "https://cdn.silvandiepen.site/shoes/nike-airjordan1_002.png", "description": "side" }
+			],
+			"price": {
+				"value": "154.99",
+				"currency": "eur"
+			},
+			"stock": 0
+		},
+		{
+			"id": 6,
+			"title": "Converse Chuck Taylor All Star",
+			"brand": "Converse",
+			"model": "Chuck Taylor All Star",
+			"description": "Chuck Taylor All-Stars or Converse All Stars (also referred to as \"Converse\", \"Chuck Taylors\", \"Chucks\", \"Cons\", and \"All Stars\") is a model of casual shoe manufactured by Converse (a subsidiary of Nike, Inc. since 2003) that was initially developed as a basketball shoe in the early 20th century. The design of the Chuck Taylor All Star has remained largely unchanged since its introduction in the 1920s. The shoe consists of a stitched upper portion, a toe cap that is usually made of white rubber, and a sole that is usually made of brown rubber. Although Chuck Taylors are made of various materials such as leather, the original and most widely known version of the shoe is made from cotton canvas. The innovative detail of the original shoe was the \"loose lining\" of soft canvas that was intended to provide flexibility and prevent blisters.\n\nThe Chuck Taylor II, an improved model, was announced by company management in July 2015. Incorporating Nike technology, it retains the outward appearance of the original shoe while employing a full-length Lunarlon insole.",
+			"images": [				
+				{ "src": "https://cdn.silvandiepen.site/shoes/converse-003.png", "description": "frontal" },
+				{ "src": "https://cdn.silvandiepen.site/shoes/converse-002.png", "description": "top" }
+			],
+			"price": {
+				"value": "59.99",
+				"currency": "eur"
+			},
+			"stock": 0
+		},
+		{
+			"id": 7,
+			"title": "Reebok The Pump",
+			"brand": "Reebok",
+			"model": "The Pump",
+			"description": "The Reebok Pump is a line of athletic shoes that was first released on November 24, 1989.[1] It was the first shoe to have an internal inflation mechanism that regulated a unique fitting cushion in the lower and upper tongue to provide locking around the ankle.",
+			"images": [
+				{ "src": "https://cdn.silvandiepen.site/shoes/reebok-thepump_001.jpg", "description": "frontal" },
+				{ "src": "https://cdn.silvandiepen.site/shoes/reebok-thepump_002.jpg", "description": "side" }
+			],
+			"price": {
+				"value": "59.99",
+				"currency": "eur"
+			},
+			"stock": 0
+		},
+		{
+			"id": 8,
+			"title": "Nike Air Max 1",
+			"brand": "Nike",
+			"model": "Air Max 1",
+			"description": "Nike Air Max is a line of shoes produced by Nike, Inc., with the first model released in 1987. Air Max shoes are identified by their midsoles incorporating flexible urethane pouches filled with pressurized gas, visible from the exterior of the shoe and intended to provide cushioning underfoot. Air Max was conceptualized by Tinker Hatfield, who initially worked for Nike designing stores, with the underlying technology being created and patented by M. Frank Rudy.",
+			"images": [
+				{ "src": "https://cdn.silvandiepen.site/shoes/nike-airmax1_001.jpg", "description": "frontal" },
+				{ "src": "https://cdn.silvandiepen.site/shoes/nike-airmax1_002.jpg", "description": "side" }
+			],
+			"price": {
+				"value": "149.99",
+				"currency": "eur"
+			},
+			"stock": 0
+		},
+		{
+			"id": 9,
+			"title": "Puma Suede",
+			"brand": "Puma",
+			"model": "Suede",
+			"images": [
+				{ "src": "https://cdn.silvandiepen.site/shoes/puma-suede_001.jpg", "description": "frontal" },
+				{ "src": "https://cdn.silvandiepen.site/shoes/puma-suede_002.jpg", "description": "side" }
+			],
+			"price": {
+				"value": "89.99",
+				"currency": "eur"
+			},
+			"stock": 0
+		},
+		{
+			"id": 10,
+			"title": "New Balance 990",
+			"brand": "New Balance",
+			"model": "990",
+			"images": [
+				{ "src": "https://cdn.silvandiepen.site/shoes/newbalance-990_001.jpg", "description": "frontal" },
+				{ "src": "https://cdn.silvandiepen.site/shoes/newbalance-990_002.jpg", "description": "side" }
+			],
+			"price": {
+				"value": "129.99",
+				"currency": "eur"
+			},
+			"stock": 0
+		},
+		{
+			"id": 11,
+			"title": "Nike Dunk",
+			"brand": "Nike",
+			"model": "Dunk",
+			"images": [
+				{ "src": "https://cdn.silvandiepen.site/shoes/nike-dunk_002.jpg", "description": "side" },
+				{ "src": "https://cdn.silvandiepen.site/shoes/nike-dunk_001.jpg", "description": "frontal" }
+			],
+			"price": {
+				"value": "99.99",
+				"currency": "eur"
+			},
+			"stock": 0
+		}
+	]
+}
