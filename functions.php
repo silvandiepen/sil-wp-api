@@ -26,7 +26,7 @@ add_action( 'login_enqueue_scripts', 'customLogin' );
 add_action( 'admin_enqueue_scripts', 'customAdmin' );
 
 
-$guynColors = ['gray-dark','gray','gray-light','ice-dark','ice','ice-light','-dark-dark','-dark','-dark-light','plum-dark','plum','plum-light','purple-dark','purple','purple-light','magenta-dark','magenta','magenta-light','pink-dark','pink','pink-light','red-dark','red','red-light','orange-dark','orange','orange-light','yellow-dark','yellow','yellow-light','lime-dark','lime','lime-light','green-dark','green','green-light','army-dark','army','army-light','turquoise-dark','turquoise','turquoise-light','cyan-dark','cyan','cyan-light','cloud-dark','cloud','cloud-light','skyblue-dark','skyblue','skyblue-light','blue-dark','blue','blue-light','brown-dark','brown','brown-light','beige-dark','beige','beige-light','white','black'];
+$guynColors = ['gray-dark','gray','gray-light','ice-dark','ice','ice-light','dark-dark','dark','dark-light','plum-dark','plum','plum-light','purple-dark','purple','purple-light','magenta-dark','magenta','magenta-light','pink-dark','pink','pink-light','red-dark','red','red-light','orange-dark','orange','orange-light','yellow-dark','yellow','yellow-light','lime-dark','lime','lime-light','green-dark','green','green-light','army-dark','army','army-light','turquoise-dark','turquoise','turquoise-light','cyan-dark','cyan','cyan-light','cloud-dark','cloud','cloud-light','skyblue-dark','skyblue','skyblue-light','blue-dark','blue','blue-light','brown-dark','brown','brown-light','beige-dark','beige','beige-light','white','black'];
 
 add_action('admin_head', 'guyn_color_options');
 function guyn_color_options() {
