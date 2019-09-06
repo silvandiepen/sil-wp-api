@@ -26,7 +26,7 @@ add_action( 'login_enqueue_scripts', 'customLogin' );
 add_action( 'admin_enqueue_scripts', 'customAdmin' );
 
 
-$guynColors = ['gray-dark','gray','gray-light','ice-dark','ice','ice-light','dark-dark','dark','dark-light','plum-dark','plum','plum-light','purple-dark','purple','purple-light','magenta-dark','magenta','magenta-light','pink-dark','pink','pink-light','red-dark','red','red-light','orange-dark','orange','orange-light','yellow-dark','yellow','yellow-light','lime-dark','lime','lime-light','green-dark','green','green-light','army-dark','army','army-light','turquoise-dark','turquoise','turquoise-light','cyan-dark','cyan','cyan-light','cloud-dark','cloud','cloud-light','skyblue-dark','skyblue','skyblue-light','blue-dark','blue','blue-light','brown-dark','brown','brown-light','beige-dark','beige','beige-light','white','black'];
+$guynColors = ['graydark','gray','graylight','icedark','ice','icelight','darkdark','dark','darklight','plumdark','plum','plumlight','purpledark','purple','purplelight','magentadark','magenta','magentalight','pinkdark','pink','pinklight','reddark','red','redlight','orangedark','orange','orangelight','yellowdark','yellow','yellowlight','limedark','lime','limelight','greendark','green','greenlight','armydark','army','armylight','turquoisedark','turquoise','turquoiselight','cyandark','cyan','cyanlight','clouddark','cloud','cloudlight','skybluedark','skyblue','skybluelight','bluedark','blue','bluelight','browndark','brown','brownlight','beigedark','beige','beigelight','white','black'];
 
 add_action('admin_head', 'guyn_color_options');
 function guyn_color_options() {
@@ -34,12 +34,14 @@ function guyn_color_options() {
 	echo '<style>
 	.acf-field[data-type="radio"][data-name="section_color"] .acf-radio-list,
 	.acf-field[data-type="radio"][data-name="color"] .acf-radio-list,
+	.acf-field[data-type="radio"][data-name="background"] .acf-radio-list,
 	.acf-field[data-type="radio"][data-name="page_color"] .acf-radio-list{
 		display:flex;
 		flex-wrap: wrap;
 	}
 	.acf-field[data-type="radio"][data-name="section_color"] .acf-radio-list li,
 	.acf-field[data-type="radio"][data-name="color"] .acf-radio-list li,
+	.acf-field[data-type="radio"][data-name="background"] .acf-radio-list li,
 	.acf-field[data-type="radio"][data-name="page_color"] .acf-radio-list li{
 		width: 2rem; height: 2rem;
 		flex-shrink: 0;
@@ -47,6 +49,7 @@ function guyn_color_options() {
 	}
 	.acf-field[data-type="radio"][data-name="section_color"] .acf-radio-list li label,
 	.acf-field[data-type="radio"][data-name="color"] .acf-radio-list li label,
+	.acf-field[data-type="radio"][data-name="background"] .acf-radio-list li label,
 	.acf-field[data-type="radio"][data-name="page_color"] .acf-radio-list li label{
 		display: block; text-indent: -999em; text-align: left; position: relative;
 		width: 2rem; height: 2rem;
@@ -54,6 +57,7 @@ function guyn_color_options() {
 
 	.acf-field[data-type="radio"][data-name="section_color"] .acf-radio-list li input,
 	.acf-field[data-type="radio"][data-name="color"] .acf-radio-list li input,
+	.acf-field[data-type="radio"][data-name="background"] .acf-radio-list li input,
 	.acf-field[data-type="radio"][data-name="page_color"] .acf-radio-list li input{
 		border: none;
 		border: 2px solid transparent;
@@ -67,6 +71,7 @@ function guyn_color_options() {
 	}
 	.acf-field[data-type="radio"][data-name="section_color"] .acf-radio-list li input:checked,
 	.acf-field[data-type="radio"][data-name="color"] .acf-radio-list li input:checked,
+	.acf-field[data-type="radio"][data-name="background"] .acf-radio-list li input:checked,
 	.acf-field[data-type="radio"][data-name="page_color"] .acf-radio-list li input:checked{
 		transform: scale(1.25);	
 		box-shadow: 0 0 1rem 0 rgba(0,0,0,0.25);
@@ -81,6 +86,8 @@ function guyn_color_options() {
 				.acf-field[data-type="radio"][data-name="section_color"] input[id*="-'.$guynColors[$i].'"],
 				.acf-field[data-type="radio"][data-name="color"] input[id^="-'.$guynColors[$i].'"],
 				.acf-field[data-type="radio"][data-name="color"] input[id*="-'.$guynColors[$i].'"],
+				.acf-field[data-type="radio"][data-name="background"] input[id^="-'.$guynColors[$i].'"],
+				.acf-field[data-type="radio"][data-name="background"] input[id*="-'.$guynColors[$i].'"],
 				.acf-field[data-type="radio"][data-name="page_color"] input[id^="-'.$guynColors[$i].'"],
 				.acf-field[data-type="radio"][data-name="page_color"] input[id*="-'.$guynColors[$i].'"]{
 			background-color: var(--guyn-'.$guynColors[$i].');
