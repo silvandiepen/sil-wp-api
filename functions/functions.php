@@ -1,6 +1,6 @@
 <?php
 	
-	function advanced_replace($searchStart, $searchEnd, $replace, $subject, &$assignValue = array(), $addValue = false, $inReplace = false, $valueKey = "") {
+function advanced_replace($searchStart, $searchEnd, $replace, $subject, &$assignValue = array(), $addValue = false, $inReplace = false, $valueKey = "") {
     $strlen = strlen( $subject );
     $open = 0;
     $ob = false;
@@ -30,4 +30,37 @@
         }
     }
     return $message; 
+}
+
+
+function get_image($ID){
+// 	$image = wp_get_attachment_url(get_post_thumbnail_id($ID));	
+$image = get_the_post_thumbnail($ID);
+
+return $image;
+/*
+	if(file_exists($image)){
+		return 'hoiiii';
+	}
+	else {
+		return 'kudt';
+	}
+*/
+/*
+	$webp =  str_replace('.png','.webp',$image);
+	if(file_exists($webp)){
+		return $webp;
+	}
+
+return $image;
+*/
+// 	return wp_get_upload_dir();
+/*
+	if(file_exists(str_replace('.png','.webp',$image)){
+		$image = str_replace('.png','.webp',$image);
+	}
+	elseif(file_exists(str_replace('.png','.webp',$image)){
+		$image = str_replace('.jpg','.webp',$image);
+	}
+*/
 }
