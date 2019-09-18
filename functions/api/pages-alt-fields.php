@@ -30,6 +30,19 @@ register_rest_field( 'page',
 );
 
 register_rest_field( 'page',
+	'fields',
+	array(
+		'get_callback'    => function($array, $attr, $request){ 
+			return get_extra_fields($array['id']);
+			
+		},
+		'update_callback' => null,
+		'schema'          => null,
+	)
+);
+
+
+register_rest_field( 'page',
 	'children',
 	array(
 		'get_callback'    => function($array, $attr, $request){ 
@@ -39,8 +52,6 @@ register_rest_field( 'page',
 		'schema'          => null,
 	)
 );
-
-
 register_rest_field( 'page',
 	'siblings',
 	array(
@@ -78,7 +89,6 @@ register_rest_field( 'page',
 		'schema'          => null,
 	)
 );
-
 register_rest_field( 'page',
 	'guid',
 	array(
@@ -149,11 +159,3 @@ register_rest_field( 'page',
 		'schema'          => null,
 	)
 );
-
-// add endpoint wich returns page based on uri/path
-add_action('rest_api_init', function () {
-	register_rest_route('wp/v2/pages', '/path', array(
-		'methods' => 'GET',
-		'callback' => 'get_page_path',
-	));
-});

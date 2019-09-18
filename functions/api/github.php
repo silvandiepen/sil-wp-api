@@ -55,6 +55,7 @@ function get_github_readme(){
 
 function get_github_readme_data($repo,$usr){
 	$url = "https://api.github.com/repos/".$usr."/".$repo."/readme";
+// 	return $url;
 	
 	
 	$ch = curl_init();

@@ -62,51 +62,6 @@ function get_all_image_sizes($attachment_id = 0) {
     return $images;
 }
 
-/*
-
-add_filter('custom_layout_content_block_filter', 'shape_blocks', 10, 2);
-
-function shape_blocks($layout_field, $depth){
-	if($layout_field['acf_fc_layout'] === 'shape_blocks'){
-		if( isset( $layout_field['blocks'] ) ){
-			foreach($layout_field['blocks'] as $key => $block){
-				if($block['page'] !== false){
-					$page = get_post($block['page']);
-					$layout_field['blocks'][$key]['block_title'] = $page->post_title;
-					$layout_field['blocks'][$key]['block_content'] = $page->post_excerpt;
-					$layout_field['blocks'][$key]['block_image'] = get_the_post_thumbnail_url($page->ID);
-					$layout_field['blocks'][$key]['block_link'] = get_page_uri($page->ID);
-				}
-				unset($layout_field['blocks'][$key]['page']);
-			}
-		}
-	}
-	return $layout_field;
-	
-}
-
-add_filter('custom_layout_content_block_filter', 'get_github_package', 10, 2);
-
-function get_github_package($layout_field, $depth){
-	if($layout_field['acf_fc_layout'] === 'shape_blocks'){
-		if( isset( $layout_field['blocks'] ) ){
-			foreach($layout_field['blocks'] as $key => $block){
-				if($block['page'] !== false){
-					$page = get_post($block['page']);
-					$layout_field['blocks'][$key]['block_title'] = $page->post_title;
-					$layout_field['blocks'][$key]['block_content'] = $page->post_excerpt;
-					$layout_field['blocks'][$key]['block_image'] = get_the_post_thumbnail_url($page->ID);
-					$layout_field['blocks'][$key]['block_link'] = get_page_uri($page->ID);
-				}
-				unset($layout_field['blocks'][$key]['page']);
-			}
-		}
-	}
-	return $layout_field;
-	
-}
-*/
-
 
 // add endpoint wich returns page based on uri/path
 add_action('rest_api_init', function () {
@@ -128,10 +83,14 @@ add_action('rest_api_init', function () {
 
 function get_extra_fields($ID){
 	$fields = get_fields($ID);
-		
-	foreach ($fields['sections'] as &$value) {
-   		if($value['package']){
-	   		$value['package']['readme'] = get_github_readme_data($value['package']['package_repo'],$value['package']['package_user']);
+	$i = 0;
+	foreach ($fields as $key => $value) {
+		if($key == 'package_name'){
+			$usr = 'silvandiepen';
+			if($fields['github_user']) { 
+				$usr = $fields['github_user']
+	   		}
+	   		$fields['package_readme'] = get_github_readme_data($fields['github_repo'],$usr);
    		}   		
 	}
 	
