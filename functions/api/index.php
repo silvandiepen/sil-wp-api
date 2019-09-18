@@ -5,4 +5,3 @@ include('pages-alt-fields.php');
 include('cache.php');
 include('posts.php');
 include('navigation.php');
-include('shoes.php');
