@@ -87,8 +87,8 @@ function get_extra_fields($ID){
 	foreach ($fields as $key => $value) {
 		if($key == 'package_name'){
 			$usr = 'silvandiepen';
-			if($fields['github_user']) { 
-				$usr = $fields['github_user']
+			if(!empty($fields['github_user'])) { 
+				$usr = $fields['github_user'];
 	   		}
 	   		$fields['package_readme'] = get_github_readme_data($fields['github_repo'],$usr);
    		}   		
