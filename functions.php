@@ -43,16 +43,15 @@ function guyn_color_options() {
 	.acf-field[data-type="radio"][data-name="color"] .acf-radio-list li,
 	.acf-field[data-type="radio"][data-name="background"] .acf-radio-list li,
 	.acf-field[data-type="radio"][data-name="page_color"] .acf-radio-list li{
-		width: 2rem; height: 2rem;
+		width: 1rem; height: 1rem;
 		flex-shrink: 0;
-		margin: 4px;
 	}
 	.acf-field[data-type="radio"][data-name="section_color"] .acf-radio-list li label,
 	.acf-field[data-type="radio"][data-name="color"] .acf-radio-list li label,
 	.acf-field[data-type="radio"][data-name="background"] .acf-radio-list li label,
 	.acf-field[data-type="radio"][data-name="page_color"] .acf-radio-list li label{
 		display: block; text-indent: -999em; text-align: left; position: relative;
-		width: 2rem; height: 2rem;
+		width: 1rem; height: 1rem;
 	}
 
 	.acf-field[data-type="radio"][data-name="section_color"] .acf-radio-list li input,
@@ -64,7 +63,7 @@ function guyn_color_options() {
 		position: absolute; left: 0; top: 0; 
 		border-radius: 4px;
 		box-shadow: none;
-		width: 2rem; height: 2rem;
+		width: 1rem; height: 1rem;
 		transform: scale(0.75);
 		transition: 0.3s ease-in-out;
 		box-shadow: 0 0 1rem 0 rgba(0,0,0,0);
@@ -79,19 +78,25 @@ function guyn_color_options() {
 
 	';
 		
-	
-	
 	foreach($guynColors as $i => $color) {
-		echo '.acf-field[data-type="radio"][data-name="section_color"] input[id^="-'.$guynColors[$i].'"],
-				.acf-field[data-type="radio"][data-name="section_color"] input[id*="-'.$guynColors[$i].'"],
-				.acf-field[data-type="radio"][data-name="color"] input[id^="-'.$guynColors[$i].'"],
+		$color = str_replace('-','',$color);
+		echo '.acf-field[data-type="radio"][data-name="section_color"] input[value="'.$color.'"],
+				.acf-field[data-type="radio"][data-name="color"] input[value="'.$color.'"],
+				.acf-field[data-type="radio"][data-name="background"] input[value="'.$color.'"],
+				.acf-field[data-type="radio"][data-name="page_color"] input[value="'.$color.'"]{
+			background-color: var(--guyn-'.$guynColors[$i].');
+		}';
+	}
+	
+/*
+	foreach($guynColors as $i => $color) {
+		echo '.acf-field[data-type="radio"][data-name="section_color"] input[id*="-'.$guynColors[$i].'"],
 				.acf-field[data-type="radio"][data-name="color"] input[id*="-'.$guynColors[$i].'"],
-				.acf-field[data-type="radio"][data-name="background"] input[id^="-'.$guynColors[$i].'"],
 				.acf-field[data-type="radio"][data-name="background"] input[id*="-'.$guynColors[$i].'"],
-				.acf-field[data-type="radio"][data-name="page_color"] input[id^="-'.$guynColors[$i].'"],
 				.acf-field[data-type="radio"][data-name="page_color"] input[id*="-'.$guynColors[$i].'"]{
 			background-color: var(--guyn-'.$guynColors[$i].');
 		}';
 	}
+*/
 	echo '</style>';
 }
