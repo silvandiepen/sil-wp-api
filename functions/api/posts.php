@@ -42,20 +42,9 @@ function get_posts_all(){
 	$i = 0;
 	foreach(get_posts(array('numberposts' => 999)) as $post){
 		if($post->post_status === "publish"){		
-// 			$posts[$i] = $post;
 			$posts[$i]->id = $post->ID;
 			$posts[$i]->title = $post->post_title;
 			$posts[$i]->name = $post->post_name;
-			$posts[$i]->content = replace_github($post->post_content);
-// 			$posts[$i]->excerpt = replace_github($post->post_excerpt);
-			$posts[$i]->date = $post->post_date;
-			$posts[$i]->date_modified = $post->post_modified;
-			$posts[$i]->title = $post->post_title;
-			$posts[$i]->status = $post->post_status;
-			$posts[$i]->categories = get_posts_categories($post->ID);
-			$posts[$i]->tags = get_posts_tags($post->ID);
-// 			$posts[$i]->fields = get_fields($post->ID);
-			$posts[$i]->featured_image = get_the_post_thumbnail_url($post->ID);
 			$i++;
 			
  		}
@@ -121,16 +110,16 @@ function get_post_by_slug(){
 
 add_action( 'rest_api_init', function () {
 
-	register_rest_route( 'posts', '/all', array(
+	register_rest_route( 'wp/v2/posts', '/all', array(
         'methods' => 'GET',
         'callback' => 'get_posts_all',
     ) );
         
-	register_rest_route( 'posts', '/post', array(
+	register_rest_route( 'wp/v2/posts', '/post', array(
         'methods' => 'GET',
         'callback' => 'get_post_by_slug',
     ) );
-	register_rest_route( 'posts', '/tag', array(
+	register_rest_route( 'wp/v2/posts', '/tag', array(
         'methods' => 'GET',
         'callback' => 'get_post_by_slug',
     ) );

@@ -185,26 +185,3 @@ function get_extra_fields($ID){
 	
 	return $fields;
 }
-
-add_action( 'rest_api_init', function () {
-
-	register_rest_route( 'pages', '/all', array(
-        'methods' => 'GET',
-        'callback' => 'get_pages_all',
-    ) );
-        
-
-	register_rest_route( 'pages', '/page', array(
-        'methods' => 'GET',
-        'callback' => 'get_page_slug',
-    ) );	
-    register_rest_route( 'pages', '/path', array(
-        'methods' => 'GET',
-        'callback' => 'get_page_path',
-    ) );
-    	register_rest_route( 'pages', '/tag', array(
-        'methods' => 'GET',
-        'callback' => 'get_post_by_slug',
-    ) );
-        
-});

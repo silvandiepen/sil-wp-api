@@ -1,4 +1,3 @@
-
 :root {
   --guyn-gray-dark: #3d4348;
   --guyn-gray-dark-hue: 207.27272727272725;
@@ -88,13 +87,13 @@
   --guyn-plum-green: 7;
   --guyn-plum-blue: 100;
 
-  --guyn-plum-light: #550764;
-  --guyn-plum-light-hue: 290.3225806451613;
-  --guyn-plum-light-saturation: 86.91588785046729;
-  --guyn-plum-light-lightness: 20.980392156862745;
-  --guyn-plum-light-red: 85;
-  --guyn-plum-light-green: 7;
-  --guyn-plum-light-blue: 100;
+  --guyn-plum-light: #620973;
+  --guyn-plum-light-hue: 290.37735849056605;
+  --guyn-plum-light-saturation: 85.48387096774194;
+  --guyn-plum-light-lightness: 24.313725490196077;
+  --guyn-plum-light-red: 98;
+  --guyn-plum-light-green: 9;
+  --guyn-plum-light-blue: 115;
 
   --guyn-purple-dark: #9710b2;
   --guyn-purple-dark-hue: 290;
@@ -112,13 +111,13 @@
   --guyn-purple-green: 35;
   --guyn-purple-blue: 207;
 
-  --guyn-purple-light: #770d8d;
-  --guyn-purple-light-hue: 289.6875;
-  --guyn-purple-light-saturation: 83.1168831168831;
-  --guyn-purple-light-lightness: 30.196078431372552;
-  --guyn-purple-light-red: 119;
-  --guyn-purple-light-green: 13;
-  --guyn-purple-light-blue: 141;
+  --guyn-purple-light: #c12bdf;
+  --guyn-purple-light-hue: 290;
+  --guyn-purple-light-saturation: 73.77049180327869;
+  --guyn-purple-light-lightness: 52.156862745098046;
+  --guyn-purple-light-red: 193;
+  --guyn-purple-light-green: 43;
+  --guyn-purple-light-blue: 223;
 
   --guyn-magenta-dark: #cb0c7a;
   --guyn-magenta-dark-hue: 325.4450261780105;
@@ -240,13 +239,13 @@
   --guyn-yellow-light-green: 237;
   --guyn-yellow-light-blue: 173;
 
-  --guyn-lime-dark: #98f42d;
-  --guyn-lime-dark-hue: 87.7386934673367;
-  --guyn-lime-dark-saturation: 90.0452488687783;
-  --guyn-lime-dark-lightness: 56.666666666666664;
-  --guyn-lime-dark-red: 152;
-  --guyn-lime-dark-green: 244;
-  --guyn-lime-dark-blue: 45;
+  --guyn-lime-dark: #8de922;
+  --guyn-lime-dark-hue: 87.73869346733667;
+  --guyn-lime-dark-saturation: 81.89300411522632;
+  --guyn-lime-dark-lightness: 52.352941176470594;
+  --guyn-lime-dark-red: 141;
+  --guyn-lime-dark-green: 233;
+  --guyn-lime-dark-blue: 34;
 
   --guyn-lime: #98f42d;
   --guyn-lime-hue: 87.7386934673367;
@@ -264,21 +263,21 @@
   --guyn-lime-light-green: 255;
   --guyn-lime-light-blue: 87;
 
-  --guyn-green-dark: #7cda0f;
-  --guyn-green-dark-hue: 87.7832512315271;
-  --guyn-green-dark-saturation: 87.1244635193133;
-  --guyn-green-dark-lightness: 45.68627450980392;
-  --guyn-green-dark-red: 124;
-  --guyn-green-dark-green: 218;
-  --guyn-green-dark-blue: 15;
+  --guyn-green-dark: #6ab933;
+  --guyn-green-dark-hue: 95.37313432835819;
+  --guyn-green-dark-saturation: 56.77966101694915;
+  --guyn-green-dark-lightness: 46.27450980392157;
+  --guyn-green-dark-red: 106;
+  --guyn-green-dark-green: 185;
+  --guyn-green-dark-blue: 51;
 
-  --guyn-green: #6ab933;
-  --guyn-green-hue: 95.37313432835819;
-  --guyn-green-saturation: 56.77966101694915;
-  --guyn-green-lightness: 46.27450980392157;
-  --guyn-green-red: 106;
-  --guyn-green-green: 185;
-  --guyn-green-blue: 51;
+  --guyn-green: #7cda0f;
+  --guyn-green-hue: 87.7832512315271;
+  --guyn-green-saturation: 87.1244635193133;
+  --guyn-green-lightness: 45.68627450980392;
+  --guyn-green-red: 124;
+  --guyn-green-green: 218;
+  --guyn-green-blue: 15;
 
   --guyn-green-light: #8ae24c;
   --guyn-green-light-hue: 95.2;
@@ -431,6 +430,30 @@
   --guyn-blue-light-red: 81;
   --guyn-blue-light-green: 140;
   --guyn-blue-light-blue: 208;
+
+  --guyn-nightblue-dark: #051425;
+  --guyn-nightblue-dark-hue: 211.875;
+  --guyn-nightblue-dark-saturation: 76.19047619047618;
+  --guyn-nightblue-dark-lightness: 8.23529411764706;
+  --guyn-nightblue-dark-red: 5;
+  --guyn-nightblue-dark-green: 20;
+  --guyn-nightblue-dark-blue: 37;
+
+  --guyn-nightblue: #09203a;
+  --guyn-nightblue-hue: 211.83673469387756;
+  --guyn-nightblue-saturation: 73.13432835820895;
+  --guyn-nightblue-lightness: 13.137254901960786;
+  --guyn-nightblue-red: 9;
+  --guyn-nightblue-green: 32;
+  --guyn-nightblue-blue: 58;
+
+  --guyn-nightblue-light: #0b294a;
+  --guyn-nightblue-light-hue: 211.42857142857142;
+  --guyn-nightblue-light-saturation: 74.11764705882352;
+  --guyn-nightblue-light-lightness: 16.666666666666668;
+  --guyn-nightblue-light-red: 11;
+  --guyn-nightblue-light-green: 41;
+  --guyn-nightblue-light-blue: 74;
 
   --guyn-brown-dark: #9d5e27;
   --guyn-brown-dark-hue: 27.966101694915253;

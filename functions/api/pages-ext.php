@@ -8,6 +8,24 @@ function get_pages_categories($ID) {
 	return $cats;
 }
 
+
+function get_pages_all() {
+	$pages = array();
+	$args = array(
+		'post_type' => 'page',
+		'post_status' => 'publish'
+	);
+	foreach(get_pages($args) as $page){
+		$current = new \stdClass; 
+		$current->ID = $page->ID;
+		$current->name = $page->post_name;
+		$current->title = $page->post_title;
+		$current->uri = get_page_uri($page->ID);
+		$pages[] = $current;
+	}
+	return $pages;
+}
+
 function get_template_name($ID) {
 	$slug = get_page_template_slug($ID);
 	$slug = str_replace(".php", "", $slug);
@@ -63,22 +81,48 @@ function get_all_image_sizes($attachment_id = 0) {
 }
 
 
+/*
+
+add_action( 'rest_api_init', function () {
+
+	register_rest_route( 'pages', '/all', array(
+        'methods' => 'GET',
+        'callback' => 'get_pages_all',
+    ) );
+	register_rest_route( 'pages', '/page', array(
+        'methods' => 'GET',
+        'callback' => 'get_page_slug',
+    ) );	
+    register_rest_route( 'pages', '/path', array(
+        'methods' => 'GET',
+        'callback' => 'get_page_path',
+    ) );
+    	register_rest_route( 'pages', '/tag', array(
+        'methods' => 'GET',
+        'callback' => 'get_post_by_slug',
+    ) );
+        
+});
+*/
+
+
 // add endpoint wich returns page based on uri/path
 add_action('rest_api_init', function () {
 	register_rest_route('wp/v2/pages', '/path', array(
 		'methods' => 'GET',
 		'callback' => 'get_page_path',
 	));
-});
-// add endpoint wich returns page based on uri/path
-add_action('rest_api_init', function () {
-	register_rest_route('pages', '/path', array(
+
+	register_rest_route('wp/v2/pages', '/path', array(
 		'methods' => 'GET',
 		'callback' => 'get_page_path',
 	));
+	
+	register_rest_route('wp/v2/pages', '/all', array(
+		'methods' => 'GET',
+		'callback' => 'get_pages_all',
+	));
 });
-
-
 
 
 function get_extra_fields($ID){

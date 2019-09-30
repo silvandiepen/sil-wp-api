@@ -1,6 +1,6 @@
 {
   "name": "sil-wp-api",
-  "version": "1.0.3",
+  "version": "1.0.7",
   "description": "Wordpress API for Sil van Diepen Projects",
   "main": "index.js",
   "scripts": {
