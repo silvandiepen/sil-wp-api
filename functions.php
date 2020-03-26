@@ -147,11 +147,23 @@ add_filter('acf/fields/flexible_content/layout_title', 'my_acf_flexible_content_
 
 add_action('admin_head', 'acf_custom_title');
 function acf_custom_title() {
-echo '<style>
-	.acf-flexible-content .layout .acf-fc-layout-handle{ display: flex !important; }
-	.acf-fc-layout-handle h4{ margin: 0 1rem; }
-	
-</style>';
+	echo '<style>
+		.acf-flexible-content .layout .acf-fc-layout-handle{ display: flex !important; }
+		.acf-fc-layout-handle h4{ margin: 0 1rem; }
+		
+	</style>';
 }
-?>
 
+if (!headers_sent()) {
+	if(isset($_SERVER['HTTP_ORIGIN'])){
+		
+		$http_origin = $_SERVER['HTTP_ORIGIN'];
+		
+		if ($http_origin == "http://localhost:3000" || $http_origin == "http://localhost:3001" || $http_origin == "https://silvandiepen.nl" || $http_origin == "https://www.silvandiepen.nl" || $http_origin == "https://staging.lenouveauchef.com"){
+			header("Access-Control-Allow-Origin: $http_origin");
+		}
+
+	} 
+}
+
+?>
